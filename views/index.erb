@@ -1,0 +1,27 @@
+<h1>Coding Log</h1>
+<hr>
+<div class="container">
+  <%  %>
+  <% if (@timer.started == "f" || nil) %>
+  <form action="/start_timer/" method="post">
+    <button class="bigbutton" type="submit">Start Timer</button>
+  </form>
+  <% else %>
+  <form action="/stop_timer/" method="get">
+    <button class="bigbutton" type="submit">Stop Timer</button>
+  </form>
+  <% end %>
+
+  <form class="form-button" action="/manual_input/" method="get">
+    <button class = "bigbutton" type="submit">
+      Manual Input</button>
+    </form>
+
+    <form action="/show_times/" method="post">
+      <button class = "bigbutton" type="submit">Show Times</button>
+    </form>
+
+    <form action="/add_new_language/" method="get">
+      <button class="bigbutton" type="submit">Add New Language</button>
+    </form>
+  </div>

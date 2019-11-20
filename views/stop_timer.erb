@@ -1,0 +1,16 @@
+<a href="/">Home</a>
+<%= @elapsed_time %><br>
+<form action="/stop_timer/" method="post">
+  <select name="id">
+    <% for language in @languages %>
+    <option value="<%= language.id %>"><%= language.name %></option>
+    <% end %>
+  </select>
+
+
+    <!-- <input type="text" name="id" value="1">Ruby</input> -->
+
+
+  <input type="submit" value="Choose Language">
+
+</form>

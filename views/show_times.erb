@@ -1,0 +1,17 @@
+<body>
+
+<a href="/">Home</a>
+
+<div class="container">
+
+
+  <% for language in @languages %>
+  <div class="bigbutton">
+  <% time = language.log_time %>
+    <p><%= language.name %><br><br><%= time %> hours</p>
+
+  </div>
+  <% end %>
+
+</div>
+</body>

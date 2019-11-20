@@ -1,0 +1,26 @@
+<body>
+
+<a href="/">Home</a>
+
+<div class="container">
+
+<% for language in @languages %>
+<div class="bigbutton" style="order: <%= language.id %>;">
+<form action="/manual_input/" method="post">
+  <%= language.name %>
+  <br>
+  <br>
+
+  <input type="hidden" name="id" value="<%= language.id %>">
+  <input type="hidden" name="name" value="<%= language.name %>">
+  <label for="time"></label>
+  <input type="number" name="time" value="" placeholder="Enter in minutes">
+  <br>
+
+  <input type="submit" name="submit" value="Submit Time">
+</form>
+</div>
+<% end %>
+
+</div>
+</body>

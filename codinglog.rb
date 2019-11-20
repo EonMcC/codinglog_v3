@@ -22,29 +22,13 @@ get '/stop_timer/' do
   erb(:stop_timer)
 end
 
-
-
-
-
-
-
-
-
-
-
-
-# currenly works but need to get a selector going.
 post '/stop_timer/' do
   time = Language.get_time(params['id'].to_i)
-
-  new_time = time.values.first.to_f + Timer.elapsed_time().to_f
-
+  time = time.values.first.to_f
+  new_time = time + (Timer.elapsed_time().to_f)
   Language.update_time(new_time, params['id'].to_i)
-
   redirect to '/'
 end
-
-
 
 post '/manual_input/' do
   new_time_seconds = params['time'].to_f
@@ -55,8 +39,6 @@ post '/manual_input/' do
   Language.update_time(new_time, params['id'].to_i)
   redirect back
 end
-
-
 
 post '/show_times/' do
   @languages = Language.all()

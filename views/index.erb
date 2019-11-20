@@ -1,14 +1,12 @@
-<h1>Coding Log</h1>
-<hr>
 <div class="container">
   <%  %>
   <% if (@timer.started == "f" || nil) %>
   <form action="/start_timer/" method="post">
-    <button class="bigbutton" type="submit">Start Timer</button>
+    <button class="bigbutton-start" type="submit">Start Timer</button>
   </form>
   <% else %>
   <form action="/stop_timer/" method="get">
-    <button class="bigbutton" type="submit">Stop Timer</button>
+    <button class="bigbutton-stop" type="submit">Stop Timer</button>
   </form>
   <% end %>
 

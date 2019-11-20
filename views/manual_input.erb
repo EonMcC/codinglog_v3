@@ -1,11 +1,21 @@
 <body>
 
-<a href="/">Home</a>
+  <div class="menu-bar">
+    <form action="/" method="get">
+      <button class="menu" type="submit">Home</button>
+    </form>
+    <form action="/show_times/" method="post">
+      <button class="menu" type="submit">Show Times</button>
+    </form>
+    <form action="/manual_input/" method="get">
+      <button class="menu" type="submit">Manual Input</button>
+    </form>
+  </div>
 
 <div class="container">
 
 <% for language in @languages %>
-<div class="bigbutton" style="order: <%= language.id %>;">
+<div class="button-manual" style="order: <%= language.id %>;">
 <form action="/manual_input/" method="post">
   <%= language.name %>
   <br>
@@ -22,5 +32,8 @@
 </div>
 <% end %>
 
+
+
 </div>
+
 </body>

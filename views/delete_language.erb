@@ -9,16 +9,20 @@
     <button class="menu" type="submit">Manual Input</button>
   </form>
 </div>
-<h3>~ Add a New Language ~</h3>
+<h3>~ Delete a Language ~</h3>
 
 
 <div class="container">
   <div class="button-manual">
-    <p>Nanguage</p>
-    <form class="form" action="/add_new_language/" method="post">
-      <input type="text" name="name" placeholder="<Name>">
+    <p>Delete</p>
+    <form class="form" action="/delete_language/" method="post">
+      <select name="id">
+        <% for language in @languages %>
+        <option value="<%= language.id %>"><%= language.name %></option>
+        <% end %>
+      </select>
       <br>
-      <input type="submit" name="submit" value="Accept New Language">
+      <input type="submit" value="Delete">
     </form>
   </div>
 </div>

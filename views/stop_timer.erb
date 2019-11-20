@@ -1,16 +1,29 @@
-<a href="/">Home</a>
-<%= @elapsed_time %><br>
-<form action="/stop_timer/" method="post">
-  <select name="id">
-    <% for language in @languages %>
-    <option value="<%= language.id %>"><%= language.name %></option>
-    <% end %>
-  </select>
+<div class="menu-bar">
+  <form action="/" method="get">
+    <button class="menu" type="submit">Home</button>
+  </form>
+  <form action="/show_times/" method="post">
+    <button class="menu" type="submit">Show Times</button>
+  </form>
+  <form action="/manual_input/" method="get">
+    <button class="menu" type="submit">Manual Input</button>
+  </form>
+</div>
+<% elapsed_time_minutes = @elapsed_time / 60 %>
+<h3>Add <%= elapsed_time_minutes.round(2)%> minutes of coding to:</h3>
+<br>
 
-
-    <!-- <input type="text" name="id" value="1">Ruby</input> -->
-
-
-  <input type="submit" value="Choose Language">
-
-</form>
+<div class="container">
+  <div class="button-manual">
+    <form class="form" action="/stop_timer/" method="post">
+      <p>Language</p>
+      <select name="id">
+        <% for language in @languages %>
+        <option value="<%= language.id %>"><%= language.name %></option>
+        <% end %>
+      </select>
+      <br>
+      <input type="submit" value="Add Time">
+    </form>
+  </div>
+</div>

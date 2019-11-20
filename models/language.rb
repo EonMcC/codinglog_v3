@@ -57,6 +57,13 @@ class Language
     SqlRunner.run(sql, values)
   end
 
+  def self.delete_by_id(id)
+    sql = "DELETE FROM languages
+    WHERE id = $1;"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
   def self.map_items(language_data)
     return language_data.map { |language| Language.new(language)}
   end

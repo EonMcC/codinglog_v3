@@ -59,3 +59,13 @@ post '/add_new_language/' do
   language.save()
   redirect to '/'
 end
+
+get '/delete_language/' do
+  @languages = Language.all()
+  erb(:delete_language)
+end
+
+post '/delete_language/' do
+  Language.delete_by_id(params['id'])
+  erb(:delete_conformation)
+end

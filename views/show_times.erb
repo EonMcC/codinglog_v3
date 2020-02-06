@@ -21,7 +21,7 @@
   <% for language in @languages %>
   <div class="bigbutton">
   <% time = language.log_time / 60 / 60%>
-    <p><%= language.name %><br><time><%= time.round(2) %></time><br><smaller>hours</smaller></p>
+    <p><%= language.name %><br><time><%= time.to_i %></time><br><smaller>hours</smaller></p>
 
   </div>
   <% end %>

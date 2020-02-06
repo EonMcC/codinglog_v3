@@ -1,7 +1,6 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('models/language')
-require_relative('models/runner')
 require_relative('models/timer')
 also_reload('./models/*')
 

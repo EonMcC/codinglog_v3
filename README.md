@@ -13,6 +13,7 @@ The code could be DRYer and it was my intention to refactor, however, since fini
 To Setup:
 Create a new PostgreSQL table called 'codinglog' by typing 'createdb codinglog'
 ``
+
 ``
 To run:
 While in the route directory type 'ruby codinglog.rb'

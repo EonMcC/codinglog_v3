@@ -1,8 +1,7 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative('models/language')
 require_relative('models/timer')
-also_reload('./models/*')
 
 get '/' do
   @timer = Timer.all().first

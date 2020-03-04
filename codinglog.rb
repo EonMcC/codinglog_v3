@@ -4,7 +4,6 @@ require_relative('models/language')
 require_relative('models/timer')
 
 get '/' do
-  print "Starting App"
   @timer = Timer.all().first
   erb(:index)
 end

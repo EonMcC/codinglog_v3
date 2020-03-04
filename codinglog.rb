@@ -1,5 +1,5 @@
 require('sinatra')
-# require('sinatra/contrib/all') if development?
+require('sinatra/contrib/all')
 require_relative('models/language')
 require_relative('models/timer')
 

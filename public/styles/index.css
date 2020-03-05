@@ -1,6 +1,8 @@
+* {
+  font-family: 'Courier';
+}
 body {
-  background-color: rgb(80, 165, 218);
-  font-family: 'Lato';
+  background-color: #759AAB;
   z-index: -1;
 }
 
@@ -63,8 +65,8 @@ inline {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .bigbutton {
@@ -72,7 +74,7 @@ inline {
   height: 200px;
   transition: all .5s ease-in;
   margin: 10px;
-  background-color: #2E5266;
+  background-color: #2B303A;
   border-radius: 10px;
   color: #D3D0CB;
   font-size: 2rem;
@@ -81,13 +83,8 @@ inline {
 }
 
 .bigbutton:hover {
-  width: 225px;
-  height: 225px;
   transition: all .5s ease-out;
-  background-color: #2E5266;
-  border-radius: 10px;
   color: #E2C044;
-  font-size: 2.3rem;
 }
 
 .bigbutton-start {
@@ -104,16 +101,8 @@ inline {
 }
 
 .bigbutton-start:hover {
-  width: 225px;
-  height: 225px;
   transition: all .5s ease-in;
-  margin: 10px;
-  background-color: green;
-  border-radius: 10px;
-  color: #D3D0CB;
-  font-size: 2rem;
-  text-align: center;
-  padding: 5px;
+  color: #E2C044;
 }
 
 .bigbutton-stop {
@@ -130,16 +119,9 @@ inline {
 }
 
 .bigbutton-stop:hover {
-  width: 225px;
-  height: 225px;
   transition: all .5s ease-in;
-  margin: 10px;
-  background-color: red;
-  border-radius: 10px;
   color: #D3D0CB;
-  font-size: 2rem;
-  text-align: center;
-  padding: 5px;
+  color: #E2C044;
 }
 
 .button-manual {
@@ -147,7 +129,7 @@ inline {
   height: 200px;
   transition: all .5s ease-in;
   margin: 10px;
-  background-color: #2E5266;
+  background-color: #2B303A;
   border-radius: 10px;
   color: #D3D0CB;
   font-size: 2rem;
